@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+@mixin font-sizes($key) {
+  $entry: map-get($font-sizes, $key);
+
+  @if $entry == null {
+    @warn "⚠️ Font-size key `#{$key}` not found in \$font-sizes map.";
+  } @else {
+    $mobile: map-get($entry, mobile);
+    font-size: map-get($mobile, size);
+    line-height: map-get($mobile, line-height);
+
+    @media (min-width: $breakpoint-tablet) {
+      $tablet: map-get($entry, tablet);
+      font-size: map-get($tablet, size);
+      line-height: map-get($tablet, line-height);
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      $desktop: map-get($entry, desktop);
+      font-size: map-get($desktop, size);
+      line-height: map-get($desktop, line-height);
+    }
+  }
+}

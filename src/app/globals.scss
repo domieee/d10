@@ -1,0 +1,86 @@
+@use "@/app/style/reset" as *;
+@use "./style/_mixins" as *;
+@use "@/app/style/_variables" as *;
+@use "@/app/style/_fontFaces" as *;
+@use 'sass:color';
+
+body {
+  font-family: "Satoshi", Arial, Helvetica, sans-serif;
+  color: #f2f2f2;
+}
+
+html {
+  background-color: black;
+}
+
+h1 {
+  @include font-sizes(h1);
+}
+h2 {
+  @include font-sizes(h2);
+}
+h3 {
+  @include font-sizes(h3);
+}
+h4 {
+  @include font-sizes(h4);
+}
+h5 {
+  @include font-sizes(h5);
+}
+h6 {
+  @include font-sizes(h6);
+}
+
+.button {
+
+
+  &--primary {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: yellow;
+    color: #030303;
+    padding: 15px 25px;
+    font-weight: 600;
+    border-radius: 100px;
+    -webkit-box-shadow: inset 2px 2px 2px -2px #FFFFFF;
+    box-shadow: inset 2px 2px 2px -2px #FFFFFF;
+
+  }
+
+  &--secondary {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #000;
+    color: #f2f2f2;
+    font-weight: 600;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    gap: 5px;
+    -webkit-box-shadow: inset 2px 2px 2px -2px #FFFFFF;
+    box-shadow: inset 2px 2px 2px -2px #FFFFFF;
+    padding: 5px 15px;
+    border-radius: 100px;
+  }
+
+  &--icon {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #030303;
+    transition: background-color 0.0875s ease;
+    padding: 5px;
+    border-radius: 50%;
+    display: inline-block;
+
+    -webkit-box-shadow: inset 2px 2px 2px -2px #FFFFFF;
+    box-shadow: inset 2px 2px 2px -2px #FFFFFF;
+
+    &:hover {
+      background-color: color.adjust(#030303, $lightness: 20%);
+    }
+  }
+}
