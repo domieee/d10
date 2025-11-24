@@ -26,7 +26,7 @@ export default function InfiniteScroller({ items }: Props) {
 	const [visibleItems, setVisibleItems] = useState<number>(0);
 	const [loopItems, setLoopItems] = useState<Item[]>([]);
 	const [url, setUrl] = useState("https://www.haus-hyazinthe.de");
-	const [img, setImg] = useState(null);
+	const [img, setImg] = useState<string | null>(null);
 
 	async function takeScreenshot() {
 		const res = await fetch(
@@ -67,8 +67,8 @@ export default function InfiniteScroller({ items }: Props) {
 			ref={containerRef}
 		>
 			<div className={styles.scrollRow}>
-				{loopItems.map((item, index) => (
-					<div key={item.toString() + index}>
+				{loopItems.map((item) => (
+					<div key={item.toString()}>
 						<p
 							style={{
 								color: "#fff",

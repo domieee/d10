@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import ButtonSecondary from "@/app/component/button/secondary/button-secondary";
 import InfiniteScroller from "@/app/component/infinite-scroller/infinite-scroller";
-import SeoCheck from "@/app/component/seo-check/seo-check";
 import styles from "./page.module.scss";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -35,7 +34,7 @@ export default function Home() {
 		}
 	}, []);
 	useEffect(() => {
-		gsap.utils.toArray("#art").forEach((wrapper) => {
+		gsap.utils.toArray("#art").forEach(() => {
 			gsap.fromTo(
 				"#art",
 				{ opacity: 1 },
@@ -403,10 +402,6 @@ export default function Home() {
 						items={[{ img: "asdasd", title: "Haus Hyazinthe" }]}
 					/>
 				</article>
-			</section>
-
-			<section>
-				<SeoCheck />
 			</section>
 		</div>
 	);
