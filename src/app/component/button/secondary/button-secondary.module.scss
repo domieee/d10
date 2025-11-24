@@ -1,0 +1,23 @@
+@use "sass:color";
+
+.buttonSecondary {
+  border: none;
+  padding: 15px 25px;
+  outline: 1px solid #fff;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 500;
+
+  &:hover {
+    background-color: color.adjust(#130F1B, $lightness: 10%);
+  }
+
+  &:active {
+    background-color: color.adjust(#130F1B, $lightness: 20%);
+  }
+  &:focus-visible {
+    background-color: color.adjust(#130F1B, $lightness: 10%);
+    outline: 1px solid color.adjust(#130F1B, $lightness: 60%);
+  }
+}

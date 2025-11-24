@@ -1,0 +1,21 @@
+.buttonSecondary {
+  border: none;
+  padding: 15px 25px;
+  outline: 1px solid #fff;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 500;
+}
+.buttonSecondary:hover {
+  background-color: rgb(42.0714285714, 33.2142857143, 59.7857142857);
+}
+.buttonSecondary:active {
+  background-color: rgb(65.1428571429, 51.4285714286, 92.5714285714);
+}
+.buttonSecondary:focus-visible {
+  background-color: rgb(42.0714285714, 33.2142857143, 59.7857142857);
+  outline: 1px solid rgb(166.2857142857, 150.8571428571, 197.1428571429);
+}
+
+/*# sourceMappingURL=button-secondary.module.css.map */

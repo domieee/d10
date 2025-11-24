@@ -2,6 +2,12 @@ $breakpoint-mobile: 0;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
+$color-primary-dark: #130F1B;
+$color-1: #5AE8A7;
+$color-2: #7EA1FF;
+$color-3: #E8B364;
+$color-4: #EBFF6F;
+$color-5: #FF7A8C;
 
 $font-sizes: (
         h1: (
@@ -88,4 +94,18 @@ $font-sizes: (
                         line-height: 1.4,
                 ),
         ),
+        body: (
+                mobile: (
+                        size: 0.875rem,
+                        line-height: 1.4,
+                ),
+                tablet: (
+                        size: 1rem,
+                        line-height: 1.5,
+                ),
+                desktop: (
+                        size: 1rem,
+                        line-height: 1.4,
+                ),
+        )
 );

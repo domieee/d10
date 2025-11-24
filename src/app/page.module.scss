@@ -1,0 +1,56 @@
+@use "@/app/style/_variables" as *;
+
+@use "sass:color";
+
+.page {
+  > section {
+    &:first-of-type {
+      height: clamp(100dvh, 100dvh, 200dvh);
+      display: flex;
+      align-items: center;
+      p, h1 {
+        text-align: center;
+      }
+    }
+    }
+
+}
+
+.services {
+  height: 500vh;
+  > article {
+    position: sticky;
+    top: 150px;
+  }
+}
+.designSelect{
+  width: 0;
+  height: 0;
+  border: 1px white dashed;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+
+  > img {
+    position: absolute;
+    top: -15%;
+    left: 95%;
+  }
+}
+
+.designTooltip {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  translate:  -50% 0;
+  font-size: clamp(10px, calc(2vw - 1rem), 12px);
+  background-color: color.adjust($color-primary-dark, $lightness: 5%);
+  white-space: nowrap;
+  padding: 2.5px 5px;
+}
+.box {
+  width: 200px;
+  height: 160px;
+  border: 1px solid white;
+  border-radius: 10px;
+}

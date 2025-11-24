@@ -11,8 +11,13 @@
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space",
-    "indentWidth": 4
+
+    "attributePosition": "auto",
+    "indentStyle": "tab",
+    "indentWidth": 4,
+    "lineWidth": 80,
+    "lineEnding": "lf"
+
   },
   "linter": {
     "enabled": true,
@@ -31,4 +36,5 @@
       }
     }
   }
+
 }
