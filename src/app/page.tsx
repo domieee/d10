@@ -228,7 +228,7 @@ export default function Home() {
 						}}
 					>
 						<ButtonSecondary text="Alle Projekte entdecken" />
-						<button className="button--primary">
+						<button type="button" className="button--primary">
 							Jetzt durchstarten
 						</button>
 					</div>
@@ -335,7 +335,7 @@ export default function Home() {
 											position: "absolute",
 										}}
 										className="bold"
-										id={id}
+										id={id.toString() || ""}
 									>
 										{char}
 									</span>
