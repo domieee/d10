@@ -1,6 +1,6 @@
 .iconButton {
   outline: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 4px;
   background-color: transparent;
   width: 40px;
   height: 40px;
@@ -11,6 +11,9 @@
 }
 .iconButton:hover {
   background-color: rgb(42.0714285714, 33.2142857143, 59.7857142857);
+}
+.iconButton:hover svg path {
+  stroke: rgb(222.1428571429, 216.4285714286, 233.5714285714);
 }
 .iconButton:active {
   background-color: rgb(65.1428571429, 51.4285714286, 92.5714285714);

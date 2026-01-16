@@ -2,27 +2,42 @@
 
 .header {
   position: fixed;
-  top: 40px;
+  top: 0;
   left:0;
   right:0;
   margin-left: auto;
   margin-right: auto;
-  width: 70vw;
-  padding: 26px 60px;
-  border-radius: 20px;
-  background: #030303;
+  width: 100vw;
+  padding: 16px ;
+  padding-inline: 128px;
+ background: #030303;
 z-index: 1000;
-  background: linear-gradient(90deg,rgba(19, 15, 27, 1) 0%, rgba(19, 15, 27, 0.4) 67%, rgba(19, 15, 27, 1) 100%);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(
+                  90deg,
+                  rgba(3, 3, 3, 1) 0%,
+                  rgba(3, 3, 3, 0.4) 67%,
+                  rgba(3, 3, 3, 1) 100%
+  );  backdrop-filter: blur(10px);
 
+display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+  > a {
+    font-weight: 600;
+  }
 }
 
 .contactRow {
   display: flex;
   align-items: center;
   gap: 10px;
-padding: 20px;
+  padding: 20px;
   border: 1px solid #f2f2f2;
   border-radius: 10px;
   position: relative;
@@ -34,81 +49,27 @@ padding: 20px;
   text-decoration: none;
 }
 
-.links {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(calc(150% - 60px), -50%);
-  gap: 40px;
-  >li {
-    font-weight: 500;list-style: none}
-}
-
-.menuWrap {
-  display: flex;
-  align-items: center;
-  gap: 7.5px;
-}
 
 
-// Gradient animation
-@keyframes gradientMove {
-  0% {
-    background-position: 0 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
-}
+
+
+
 
 .navFirstRow {
   display: flex;
   justify-content: space-between;
   align-items: center;
 margin-block: auto;
-  height: 45px;
-
+width: 100%;
 }
 
 
-
-.logo {
-  display: block;
-}
-
-.desktop {
-  display: block;
-}
-
-.mobile {
-  display: none;
-}
-
-.linksMenu {
-  display: none;
-}
 
 @media (max-width: 768px) {
-  .desktop {
-    display: none;
-  }
-  .mobile {
-    display: block;
-  }
+
 
 
   .header {
     width: 90vw;
-  }
-}
-
-
-@media (max-width: 1028px) {
-
-
-  .links { display: none !important;  }
-  .linksMenu {
-    display: flex;
   }
 }

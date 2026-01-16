@@ -11,23 +11,34 @@ body {
 }
 
 html {
-  background-color: #130F1B;
+  background-color: #030303;
   overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 h1 {
-  font-family: "Satoshi", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  letter-spacing: -2px;
   font-size: clamp(2rem, 4vw, 10rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+
 }
 
+p {
+
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 65ch;
+  }
+
 h2 {
-  @include font-sizes(h2);
+  font-size: clamp(1.5rem, 3vw, 4rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
 }
 
 h3 {
-  @include font-sizes(h3);
+  font-size: clamp(1.25rem, 2vw, 2.5rem);
+  line-height: 1.25;
 }
 
 h4 {
@@ -83,9 +94,10 @@ button, a {
     gap: 7.5px;
     background-color: yellow;
     color: #030303;
-    padding: 15px 25px;
+    padding-inline: 25px;
+    height: 40px;
     font-weight: 600;
-    border-radius: 10px;
+    border-radius: 4px;
     -webkit-box-shadow: inset 2px 2px 2px -2px #FFFFFF;
     box-shadow: inset 2px 2px 2px -2px #FFFFFF;
 

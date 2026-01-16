@@ -3,54 +3,96 @@
 @use "sass:color";
 
 .page {
-  > section {
-    &:first-of-type {
-      height: clamp(100dvh, 100dvh, 200dvh);
+  > .hero {
+    height: clamp(100dvh, 100dvh, 200dvh);
+    display: flex;
+    align-items: center;
+    > article {
       display: flex;
       align-items: center;
+      flex-direction: column;
+      gap: 1.4rem;
       p, h1 {
         text-align: center;
       }
     }
+
+
     }
 
 }
 
+
+
 .services {
-  height: 500vh;
-  > article {
-    position: sticky;
-    top: 150px;
-  }
-}
-.designSelect{
-  width: 0;
-  height: 0;
-  border: 1px white dashed;
-  bottom: 0;
-  left: 0;
-  position: absolute;
+  width: 100%;
 
-  > img {
-    position: absolute;
-    top: -15%;
-    left: 95%;
-  }
 }
 
-.designTooltip {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  translate:  -50% 0;
-  font-size: clamp(10px, calc(2vw - 1rem), 12px);
-  background-color: color.adjust($color-primary-dark, $lightness: 5%);
-  white-space: nowrap;
-  padding: 2.5px 5px;
+.blockRow {
+  gap: 2rem;
+  width: 100%;
+  margin-block: 3rem 6rem;
+
+  padding-bottom: 60vh;
 }
-.box {
-  width: 200px;
-  height: 160px;
-  border: 1px solid white;
+
+.services {
+  position: relative;
+}
+
+/* Sticky Header */
+.servicesHeader {
+  position: sticky;
+  top: 120px;
+  z-index: 1;
+  padding-bottom: 1.5rem;
+}
+
+/* Wrapper für Scrollraum */
+.blockRow {
+  position: relative;
+  padding-bottom: 100vh;
+}
+
+/* Cards */
+.block {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 16px;
+  height: 380px;
   border-radius: 10px;
+  margin-bottom: 3rem;
+
+  background: white;
+  transition: transform 0.3s ease;
+   ul  li {
+    list-style: none;
+  }
+}
+
+/* Stacking */
+.block:nth-child(2) {
+  top: 200px;
+  background: red;
+  z-index: 2;
+}
+
+.block:nth-child(3) {
+  top: 200px;
+  background: blue;
+  z-index: 3;
+}
+
+.block:nth-of-type(4) {
+  top: 200px;
+  background: darkblue;
+  z-index: 4;
+}
+
+.block:not(:first-of-type) {
+  transform: translateY(20px);
 }

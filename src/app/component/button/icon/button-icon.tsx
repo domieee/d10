@@ -4,13 +4,21 @@ import styles from "./button-icon.module.scss";
 
 type ButtonIconProps = {
 	icon: React.ReactNode;
+	callback: any;
+	style?: React.CSSProperties;
 };
 
 // forwardRef automatically makes the ref optional
 const ButtonIcon = forwardRef<HTMLButtonElement, ButtonIconProps>(
-	({ icon }, ref) => {
+	({ icon, callback = null, style = {} }, ref) => {
 		return (
-			<button ref={ref} type="button" className={styles.iconButton}>
+			<button
+				onClick={callback}
+				ref={ref}
+				style={style}
+				type="button"
+				className={styles.iconButton}
+			>
 				{icon}
 			</button>
 		);
