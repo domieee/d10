@@ -16,6 +16,7 @@ $services-sticking-position: 30vh;
   position: relative;
   z-index: 2;
   > .hero {
+    overflow: hidden;
     position: sticky;
     top: 0;
     padding: unset;
