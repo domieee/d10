@@ -6,13 +6,15 @@
 
 body {
     font-family: "Satoshi", Arial, Helvetica, sans-serif;
-    color: #030303;
+    color: #f2f2f2;
+    background-color: #030303;
 }
 
 html {
     overflow-x: hidden;
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
+    background-color: #030303;
 }
 
 .backgroundOverlay {
