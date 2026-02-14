@@ -1,13 +1,9 @@
 "use client";
 
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { LucideMail, LucideMenu, LucidePhone, LucideX } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useRef } from "react";
+import { LucidePhone } from "lucide-react";
 import ButtonIcon from "@/app/component/button/icon/button-icon";
 import styles from "./header.module.scss";
 
