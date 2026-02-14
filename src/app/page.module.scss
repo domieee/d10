@@ -1,98 +1,238 @@
 @use "@/app/style/_variables" as *;
 
 @use "sass:color";
+$services-sticking-position: 30vh;
+
+.textWrap {
+  max-width: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
 
 .page {
+  position: relative;
+  z-index: 2;
   > .hero {
-    height: clamp(100dvh, 100dvh, 200dvh);
+    position: sticky;
+    top: 0;
+    padding: unset;
+  margin-inline:auto;
     display: flex;
+    width: 100%;
     align-items: center;
     > article {
+  display: flex;
+      height: 100vh;
+  align-items: center;
+      justify-content: center;
+  flex-direction: column;
+  margin-inline: auto;
+      scale: 0.9;
+  width: 100%;
+  gap: 1.4rem;
+
+  p, h1 {
+    text-align: center;
+    position: relative;
+    z-index: 2000;
+
+    text-shadow: 0px 0px 20px #000000;}
+    }
+
+
+    }
+
+}
+
+.ansatz {
+     fieldset {
+       &:first-of-type {
+         margin-top: 3rem;
+       }
+      legend {
+        display: flex;
+        align-items: center;
+        padding-inline: 1rem;
+        padding-block: 0.25rem;
+        font-size: 0.85rem;
+        border-radius: 50px;
+
+        outline: hsl(0, 0%, 25%) solid 1px;
+        width: fit-content;
+        font-weight: 600;
+        background-color: #025949;
+        }
       display: flex;
-      align-items: center;
       flex-direction: column;
-      gap: 1.4rem;
-      p, h1 {
-        text-align: center;
-      }
-    }
+      gap: 0.5rem;
+       padding: 2rem;
+       margin-bottom: 3rem;
+       border: hsl(0, 0%, 25%) solid 1px;
+       border-radius: 4px;
+       background: linear-gradient(90deg,rgba(17, 17, 17, 1) 0%, rgba(34, 34, 34, 1) 100%);
+> p {
+  color:#B3B3B3;
 
-
-    }
-
+}
+     }
 }
 
 
 
 .services {
-  width: 100%;
-
-}
-
-.blockRow {
-  gap: 2rem;
-  width: 100%;
-  margin-block: 3rem 6rem;
-
-  padding-bottom: 60vh;
-}
-
-.services {
   position: relative;
+  margin-top: 200px;
 }
 
-/* Sticky Header */
-.servicesHeader {
-  position: sticky;
-  top: 120px;
-  z-index: 1;
-  padding-bottom: 1.5rem;
+
+
+.scrollButton {
+  position: absolute;
+  bottom: calc(100vh - 90vh);
+  display: flex;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 0.4rem;
+  font-weight: 600;
+  border-radius: 50px;
+  outline: #333 solid 1px;
+  padding-block: 0.25rem;
+  padding-inline: 1rem;
+  width: fit-content;
+  background: #111;
+  background: linear-gradient(90deg,rgba(17, 17, 17, 1) 0%, rgba(34, 34, 34, 1) 100%);
+transition: outline-color 0.2s ease-out,
+background-color 0.2s ease-out;
+z-index: 10;
+
+  &:hover {
+    outline: #555 solid 1px;
+
+  }
+
 }
 
-/* Wrapper für Scrollraum */
-.blockRow {
-  position: relative;
-  padding-bottom: 100vh;
+.blockWrapper {
+  margin-top: 2rem;
+ text-align: center;
 }
-
 /* Cards */
 .block {
-  position: sticky;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-
-  padding: 16px;
-  height: 380px;
-  border-radius: 10px;
-  margin-bottom: 3rem;
-
-  background: white;
+  align-items: center;
+   border-radius: 4px;
+  margin-bottom: 5rem;
+  padding: 1rem;
   transition: transform 0.3s ease;
-   ul  li {
-    list-style: none;
+  top: calc($services-sticking-position + 48px);
+  text-align: center;
+ h2 {
+   text-align: center;
+ }
+  ul {
+     display: flex;
+     gap: 1rem;
+      flex-wrap: wrap;
+     font-weight: 500;
+  font-size: 0.85rem;
+   }
+}
+
+.blockHeader {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  > p {
+    color: #b3b3b3;
   }
 }
 
-/* Stacking */
-.block:nth-child(2) {
-  top: 200px;
-  background: red;
-  z-index: 2;
+
+
+.contact {
+  article {
+    form {
+      margin-block: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      div {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        input {
+          width: 100%;
+        }
+      }
+
+      textarea{
+        resize: none;
+        height: 7.5rem;
+        width: 100%;
+      }
+
+      button {
+        width: fit-content;
+      }
+    }
+  }
 }
 
-.block:nth-child(3) {
-  top: 200px;
-  background: blue;
-  z-index: 3;
+
+
+.projectCall {
+  position: sticky;
+  top: 80px;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.block:nth-of-type(4) {
-  top: 200px;
-  background: darkblue;
-  z-index: 4;
+.projectCallWrapper {
+  height: 300dvh;
+  position: relative;
+  padding-inline: calc(12.5% + 60px);
+
 }
 
-.block:not(:first-of-type) {
-  transform: translateY(20px);
+.blockChip {
+  display: flex;
+  outline: hsl(0, 0%, 50%) solid 1px;
+  border-radius: 50px;
+
+  width: fit-content;
+  padding-inline: 1rem;
+  padding-block: 0.25rem;
+  align-items: center;
+font-weight: 500;
+  list-style: none;
+    -webkit-box-shadow: 5px 5px 5px -6px #000000;
+  box-shadow: 5px 5px 5px -6px #000000;
+  > svg {
+    margin-right: 0.75rem;
+  }
+  &:first-of-type {
+    background-color: #025949;
+  }
+}
+
+@media (width < 1200px) {
+  .contact {
+    article {
+      form {
+        div {
+          flex-direction: column;
+        }
+      }
+    }
+  }
 }

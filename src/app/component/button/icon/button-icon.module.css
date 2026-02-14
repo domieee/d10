@@ -1,26 +1,21 @@
 .iconButton {
-  outline: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: calc(infinity * 1px);
   background-color: transparent;
-  width: 40px;
-  height: 40px;
+  outline: 0px solid hsl(168.97, 95.6%, 30%);
+  width: 3rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
+  transition: background-color 0.075s linear;
 }
 .iconButton:hover {
-  background-color: rgb(42.0714285714, 33.2142857143, 59.7857142857);
-}
-.iconButton:hover svg path {
-  stroke: rgb(222.1428571429, 216.4285714286, 233.5714285714);
-}
-.iconButton:active {
-  background-color: rgb(65.1428571429, 51.4285714286, 92.5714285714);
+  background-color: rgb(42.5, 42.5, 42.5);
 }
 .iconButton:focus-visible {
-  background-color: rgb(42.0714285714, 33.2142857143, 59.7857142857);
-  outline: 1px solid rgb(166.2857142857, 150.8571428571, 197.1428571429);
+  background-color: rgb(42.5, 42.5, 42.5);
+  outline: 1px solid rgb(144.5, 144.5, 144.5);
 }
 
 /*# sourceMappingURL=button-icon.module.css.map */

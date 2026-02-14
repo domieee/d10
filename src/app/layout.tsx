@@ -18,6 +18,7 @@ export default function RootLayout({
 			<body>
 				<Header />
 				{children}
+				<div className="backgroundOverlay"></div>
 			</body>
 		</html>
 	);

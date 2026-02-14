@@ -11,38 +11,119 @@ body {
 }
 
 html {
-  background-color: #030303;
   overflow-x: hidden;
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+.backgroundOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+background-color: #030303;
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw, 10rem);
-  line-height: 1.05;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.20;
   letter-spacing: -0.03em;
+
 
 }
 
-p {
+p, figure {
 
     font-size: 1rem;
     line-height: 1.6;
     max-width: 65ch;
+  color: hsl(0, 0%, 75%);
+
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.85rem;
+
+}
+
+.subtext {
+  font-size: 0.85rem;
+}
+
+.input {
+  padding-inline: 1.25rem;
+  padding-block: 0.75rem;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  border: none;
+  outline: none;
+
+  &.primary {
+    caret-shape: underscore;
+    caret-color: hsl(0, 0%, 95%);
+    outline: 1px solid hsl(0, 0%, 25%);
+    transition: outline-color 0.1s ease-in;
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(0, 0%, 15%);
+
+    &::placeholder {
+      color: hsl(0, 0%, 40%);
+    }
+    &::selection {
+      background:  hsl(0, 0%, 95%);
+      color: hsl(0, 0%, 5%);
+    }
+    &:focus {
+      outline: 1px solid hsl(0, 0%, 35%);
+    }
   }
 
-h2 {
+
+}
+
+
+
+
+.big {
+  font-size: clamp(1.25rem, 2vw, 2.5rem);
+  line-height: 1.25;
+  font-weight: 600;
+  text-align: center;
+  will-change: color;
+  position: relative;
+  width: fit-content;
+
+}
+h1, h2, h3, h4 {
+color: hsl(0, 0%, 95%);}
+
+h2, .subheading {
   font-size: clamp(1.5rem, 3vw, 4rem);
   line-height: 1.15;
   letter-spacing: -0.015em;
 }
 
+.subheading {
+  font-size: clamp(1rem, 3vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-family: Stardom, system-ui;
+  color:#B3B3B3;
+}
+
+
 h3 {
-  font-size: clamp(1.25rem, 2vw, 2.5rem);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
   line-height: 1.25;
 }
 
 h4 {
-  @include font-sizes(h4);
+  @include font-sizes(body);
 }
 
 h5 {
@@ -61,20 +142,13 @@ section {
   padding-inline: calc(12.5% + 60px);
 }
 
-::selection {
-  background: blue; /* WebKit/Blink Browsers */
-}
+
+
 ::-moz-selection {
-  background: blue; /* Gecko Browsers */
+  background: hsl(227, 83%, 88%);
+  color: #030303;
 }
 
-.gradient-text {
-  background: linear-gradient(90deg, #fff, #E1FF00, #fff);
-  background-size: 200% 100%;
-  animation: shine 4s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 html, body {
   cursor: url("../../public/cursor.svg"), auto;
 }
@@ -83,7 +157,18 @@ button, a {
   cursor: url("../../public/pointinghand.svg"), auto !important;
 }
 
+.cta {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: #025949;
+  outline: none;
+  border: none;
+width: 3rem;
+  height: 3rem;
+  border-radius: 0.25rem;
 
+}
 
 .button {
   &--primary {
@@ -92,15 +177,26 @@ button, a {
     display: flex;
     align-items: center;
     gap: 7.5px;
-    background-color: yellow;
+    background-color: hsl(0, 0%, 95%);
     color: #030303;
-    padding-inline: 25px;
-    height: 40px;
-    font-weight: 600;
+    padding-inline: 1.25rem;
+    padding-block: 0.75rem;
+    font-weight: 800;
     border-radius: 4px;
     -webkit-box-shadow: inset 2px 2px 2px -2px #FFFFFF;
-    box-shadow: inset 2px 2px 2px -2px #FFFFFF;
+    transition: background-color 0.1s ease-in;
+   &:hover {
+     background-color: hsl(0, 0%, 75%);
+   }
 
+    &:focus-visible {
+      box-shadow:  0 0 0 3px #000, 0 0 0 4px hsl(0, 0%, 75%);;
+
+    }
+
+    &:active {
+      background-color: hsl(0, 0%, 55%)
+    }
   }
 
 
@@ -122,7 +218,7 @@ button, a {
 
   &--icon {
     outline: none;
-    background-color: color.adjust(#030303, $lightness: 5%);
+    background-color: color.adjust(#025949, $lightness: 5%);
     border-radius: 10px;
     transition: background-color 0.0875s ease;
     padding: 10px;
@@ -131,7 +227,7 @@ button, a {
     border: 1px solid #f2f2f2;
 
     &:hover {
-      background-color: color.adjust(#030303, $lightness: 10%);
+      background-color: color.adjust(#025949, $lightness: 10%);
     }
 
     &:active {
@@ -141,82 +237,7 @@ button, a {
 }
 
 
-#curlet {
-  opacity: 0;
-}
 
-#E1, #N2, #T3, #W4, #I5, #C6, #K7, #E8, #L9, #N10 {
-  display: none;
-}
-
-:root {
-  --radius: 0.625rem;
-  --background: oklch(0.097 0 89.876);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
 
 @layer base {
   * {
@@ -233,40 +254,11 @@ button, a {
   font-weight: bold;
 }
 
-#entwickeln, #designen, #skalieren {
-  display: flex;
-  gap: 0px;
-}
 
 @media (width < 600px) {
   section {
     padding-inline: calc(2% + 60px);
   }
-}
-
-#D1 {
-  color: $color-1;
-}
-#E2 {
-  color: $color-2 ;
-}
-
-#S3 {
-  color: $color-3 ;
-}
-
-#I4{
-  color: $color-4 ;
-}
-
-#G5 {
-  color: $color-5 ;
-}
-#N6 {
-  color: $color-1 ;
-}
-#E7{
-  color: $color-2 ;
 }
 
 

@@ -17,16 +17,9 @@ gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
 	return (
 		<header className={styles.header}>
-			<div className={styles.logoWrapper}>
-				<Image
-					src="/d10.svg"
-					alt="Logo von Dimension Zehn"
-					width={48}
-					height={48}
-					className={`${styles.logo} ${styles.desktop}`}
-					priority
-				/>
-			</div>
+			<a href="/" className={styles.logoWrapper}>
+				<p>D10</p>
+			</a>
 
 			<ul className={styles.links}>
 				<a href="https://www.google.de">Leistungen</a>
