@@ -5,245 +5,245 @@
 @use "sass:color";
 
 body {
-  font-family: "Satoshi", Arial, Helvetica, sans-serif;
-  color: #f2f2f2;
+    font-family: "Satoshi", Arial, Helvetica, sans-serif;
+    color: #030303;
 }
 
 html {
-  overflow-x: hidden;
-  scrollbar-gutter: stable;
-  scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
 }
 
 .backgroundOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100vw;
-  height: 100dvh;
-  background-color: #030303;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100dvh;
+    background-color: #030303;
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.2;
-  letter-spacing: -0.03em;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
 }
 
 p,
 figure {
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 65ch;
-  color: hsl(0, 0%, 75%);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 65ch;
+    color: hsl(0, 0%, 75%);
 }
 
 figcaption {
-  font-style: italic;
-  font-size: 0.85rem;
+    font-style: italic;
+    font-size: 0.85rem;
 }
 
 .subtext {
-  font-size: 0.85rem;
+    font-size: 0.85rem;
 }
 
 .input {
-  padding-inline: 1.25rem;
-  padding-block: 0.75rem;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: 500;
-  border: none;
-  outline: none;
+    padding-inline: 1.25rem;
+    padding-block: 0.75rem;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    border: none;
+    outline: none;
 
-  &.primary {
-    caret-shape: underscore;
-    caret-color: hsl(0, 0%, 95%);
-    outline: 1px solid hsl(0, 0%, 25%);
-    transition: outline-color 0.1s ease-in;
-    color: hsl(0, 0%, 95%);
-    background-color: hsl(0, 0%, 15%);
+    &.primary {
+        caret-shape: underscore;
+        caret-color: hsl(0, 0%, 95%);
+        outline: 1px solid hsl(0, 0%, 25%);
+        transition: outline-color 0.1s ease-in;
+        color: hsl(0, 0%, 95%);
+        background-color: hsl(0, 0%, 15%);
 
-    &::placeholder {
-      color: hsl(0, 0%, 40%);
+        &::placeholder {
+            color: hsl(0, 0%, 40%);
+        }
+        &::selection {
+            background: hsl(0, 0%, 95%);
+            color: hsl(0, 0%, 5%);
+        }
+        &:focus {
+            outline: 1px solid hsl(0, 0%, 35%);
+        }
     }
-    &::selection {
-      background: hsl(0, 0%, 95%);
-      color: hsl(0, 0%, 5%);
-    }
-    &:focus {
-      outline: 1px solid hsl(0, 0%, 35%);
-    }
-  }
 }
 
 .big {
-  font-size: clamp(1.25rem, 2vw, 2.5rem);
-  line-height: 1.25;
-  font-weight: 600;
-  text-align: center;
-  will-change: color;
-  position: relative;
-  width: fit-content;
+    font-size: clamp(1.25rem, 2vw, 2.5rem);
+    line-height: 1.25;
+    font-weight: 600;
+    text-align: center;
+    will-change: color;
+    position: relative;
+    width: fit-content;
 }
 h1,
 h2,
 h3,
 h4 {
-  color: hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
 }
 
 h2,
 .subheading {
-  font-size: clamp(1.5rem, 3vw, 4rem);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
 }
 
 .subheading {
-  font-size: clamp(1rem, 3vw, 2rem);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-  font-family: Stardom, system-ui;
-  color: #b3b3b3;
+    font-size: clamp(1rem, 3vw, 2rem);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-family: Stardom, system-ui;
+    color: #b3b3b3;
 }
 
 h3 {
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-  line-height: 1.25;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    line-height: 1.25;
 }
 
 h4 {
-  @include font-sizes(body);
+    @include font-sizes(body);
 }
 
 h5 {
-  @include font-sizes(h5);
+    @include font-sizes(h5);
 }
 
 h6 {
-  @include font-sizes(h6);
+    @include font-sizes(h6);
 }
 
 button {
-  @include font-sizes(body);
+    @include font-sizes(body);
 }
 
 section {
-  padding-inline: calc(12.5% + 60px);
+    padding-inline: calc(12.5% + 60px);
 }
 
 ::-moz-selection {
-  background: hsl(227, 83%, 88%);
-  color: #030303;
+    background: hsl(227, 83%, 88%);
+    color: #030303;
 }
 
 html,
 body {
-  cursor: url("../../public/cursor.svg"), auto;
+    cursor: url("../../public/cursor.svg"), auto;
 }
 
 button,
 a {
-  cursor: url("../../public/pointinghand.svg"), auto !important;
+    cursor: url("../../public/pointinghand.svg"), auto !important;
 }
 
 .cta {
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  background-color: #025949;
-  outline: none;
-  border: none;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 0.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background-color: #025949;
+    outline: none;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.25rem;
 }
 
 .button {
-  &--primary {
-    outline: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 7.5px;
-    background-color: hsl(0, 0%, 95%);
-    color: #030303;
-    padding-inline: 1.25rem;
-    padding-block: 0.75rem;
-    font-weight: 800;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 2px 2px 2px -2px #ffffff;
-    transition: background-color 0.1s ease-in;
-    &:hover {
-      background-color: hsl(0, 0%, 75%);
+    &--primary {
+        outline: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 7.5px;
+        background-color: hsl(0, 0%, 95%);
+        color: #030303;
+        padding-inline: 1.25rem;
+        padding-block: 0.75rem;
+        font-weight: 800;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 2px 2px 2px -2px #ffffff;
+        transition: background-color 0.1s ease-in;
+        &:hover {
+            background-color: hsl(0, 0%, 75%);
+        }
+
+        &:focus-visible {
+            box-shadow:
+                0 0 0 3px #000,
+                0 0 0 4px hsl(0, 0%, 75%);
+        }
+
+        &:active {
+            background-color: hsl(0, 0%, 55%);
+        }
     }
 
-    &:focus-visible {
-      box-shadow:
-        0 0 0 3px #000,
-        0 0 0 4px hsl(0, 0%, 75%);
+    &--secondary {
+        outline: none;
+        border: none;
+        background-color: #000;
+        color: #f2f2f2;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        -webkit-box-shadow: inset 2px 2px 2px -2px #ffffff;
+        box-shadow: inset 2px 2px 2px -2px #ffffff;
+        padding: 5px 15px;
+        border-radius: 100px;
     }
 
-    &:active {
-      background-color: hsl(0, 0%, 55%);
+    &--icon {
+        outline: none;
+        background-color: color.adjust(#025949, $lightness: 5%);
+        border-radius: 10px;
+        transition: background-color 0.0875s ease;
+        padding: 10px;
+        display: inline-block;
+        line-height: 0;
+        border: 1px solid #f2f2f2;
+
+        &:hover {
+            background-color: color.adjust(#025949, $lightness: 10%);
+        }
+
+        &:active {
+            background-color: color.adjust(#030303, $lightness: -5%);
+        }
     }
-  }
-
-  &--secondary {
-    outline: none;
-    border: none;
-    background-color: #000;
-    color: #f2f2f2;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    -webkit-box-shadow: inset 2px 2px 2px -2px #ffffff;
-    box-shadow: inset 2px 2px 2px -2px #ffffff;
-    padding: 5px 15px;
-    border-radius: 100px;
-  }
-
-  &--icon {
-    outline: none;
-    background-color: color.adjust(#025949, $lightness: 5%);
-    border-radius: 10px;
-    transition: background-color 0.0875s ease;
-    padding: 10px;
-    display: inline-block;
-    line-height: 0;
-    border: 1px solid #f2f2f2;
-
-    &:hover {
-      background-color: color.adjust(#025949, $lightness: 10%);
-    }
-
-    &:active {
-      background-color: color.adjust(#030303, $lightness: -5%);
-    }
-  }
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
+    * {
+        @apply border-border outline-ring/50;
+    }
 
-  body {
-    @apply bg-background text-foreground;
-  }
+    body {
+        @apply bg-background text-foreground;
+    }
 }
 
 .bold {
-  font-size: clamp(0.5rem, calc(3vw + 1rem), 7rem);
-  font-weight: bold;
+    font-size: clamp(0.5rem, calc(3vw + 1rem), 7rem);
+    font-weight: bold;
 }
 
 @media (width < 600px) {
-  section {
-    padding-inline: calc(2% + 60px);
-  }
+    section {
+        padding-inline: calc(2% + 60px);
+    }
 }
