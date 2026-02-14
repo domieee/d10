@@ -217,10 +217,9 @@ const Threads: React.FC<ThreadsProps> = ({
 					ease: "none",
 					scrollTrigger: {
 						trigger: container,
-						start: "bottom bottom",
+						start: "bottom 95%",
 						end: "bottom 65%",
 						scrub: 1, // scrub can be true/number; number = smoothing duration [web:9]
-						markers: true,
 					},
 				},
 			);

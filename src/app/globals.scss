@@ -2,8 +2,7 @@
 @use "./style/_mixins" as *;
 @use "@/app/style/_variables" as *;
 @use "@/app/style/_fontFaces" as *;
-@use 'sass:color';
-
+@use "sass:color";
 
 body {
   font-family: "Satoshi", Arial, Helvetica, sans-serif;
@@ -23,30 +22,26 @@ html {
   z-index: 1;
   width: 100vw;
   height: 100dvh;
-background-color: #030303;
+  background-color: #030303;
 }
 
 h1 {
   font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.20;
+  line-height: 1.2;
   letter-spacing: -0.03em;
-
-
 }
 
-p, figure {
-
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 65ch;
+p,
+figure {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 65ch;
   color: hsl(0, 0%, 75%);
-
 }
 
 figcaption {
   font-style: italic;
   font-size: 0.85rem;
-
 }
 
 .subtext {
@@ -75,19 +70,14 @@ figcaption {
       color: hsl(0, 0%, 40%);
     }
     &::selection {
-      background:  hsl(0, 0%, 95%);
+      background: hsl(0, 0%, 95%);
       color: hsl(0, 0%, 5%);
     }
     &:focus {
       outline: 1px solid hsl(0, 0%, 35%);
     }
   }
-
-
 }
-
-
-
 
 .big {
   font-size: clamp(1.25rem, 2vw, 2.5rem);
@@ -97,12 +87,16 @@ figcaption {
   will-change: color;
   position: relative;
   width: fit-content;
-
 }
-h1, h2, h3, h4 {
-color: hsl(0, 0%, 95%);}
+h1,
+h2,
+h3,
+h4 {
+  color: hsl(0, 0%, 95%);
+}
 
-h2, .subheading {
+h2,
+.subheading {
   font-size: clamp(1.5rem, 3vw, 4rem);
   line-height: 1.15;
   letter-spacing: -0.015em;
@@ -113,9 +107,8 @@ h2, .subheading {
   line-height: 1.15;
   letter-spacing: -0.015em;
   font-family: Stardom, system-ui;
-  color:#B3B3B3;
+  color: #b3b3b3;
 }
-
 
 h3 {
   font-size: clamp(1.25rem, 2vw, 1.75rem);
@@ -142,18 +135,18 @@ section {
   padding-inline: calc(12.5% + 60px);
 }
 
-
-
 ::-moz-selection {
   background: hsl(227, 83%, 88%);
   color: #030303;
 }
 
-html, body {
+html,
+body {
   cursor: url("../../public/cursor.svg"), auto;
 }
 
-button, a {
+button,
+a {
   cursor: url("../../public/pointinghand.svg"), auto !important;
 }
 
@@ -164,10 +157,9 @@ button, a {
   background-color: #025949;
   outline: none;
   border: none;
-width: 3rem;
+  width: 3rem;
   height: 3rem;
   border-radius: 0.25rem;
-
 }
 
 .button {
@@ -183,23 +175,22 @@ width: 3rem;
     padding-block: 0.75rem;
     font-weight: 800;
     border-radius: 4px;
-    -webkit-box-shadow: inset 2px 2px 2px -2px #FFFFFF;
+    -webkit-box-shadow: inset 2px 2px 2px -2px #ffffff;
     transition: background-color 0.1s ease-in;
-   &:hover {
-     background-color: hsl(0, 0%, 75%);
-   }
+    &:hover {
+      background-color: hsl(0, 0%, 75%);
+    }
 
     &:focus-visible {
-      box-shadow:  0 0 0 3px #000, 0 0 0 4px hsl(0, 0%, 75%);;
-
+      box-shadow:
+        0 0 0 3px #000,
+        0 0 0 4px hsl(0, 0%, 75%);
     }
 
     &:active {
-      background-color: hsl(0, 0%, 55%)
+      background-color: hsl(0, 0%, 55%);
     }
   }
-
-
 
   &--secondary {
     outline: none;
@@ -210,8 +201,8 @@ width: 3rem;
     display: flex;
     align-items: center;
     gap: 5px;
-    -webkit-box-shadow: inset 2px 2px 2px -2px #FFFFFF;
-    box-shadow: inset 2px 2px 2px -2px #FFFFFF;
+    -webkit-box-shadow: inset 2px 2px 2px -2px #ffffff;
+    box-shadow: inset 2px 2px 2px -2px #ffffff;
     padding: 5px 15px;
     border-radius: 100px;
   }
@@ -236,9 +227,6 @@ width: 3rem;
   }
 }
 
-
-
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -250,15 +238,12 @@ width: 3rem;
 }
 
 .bold {
-  font-size: clamp(0.5rem, calc(3vw + 1rem) , 7rem);
+  font-size: clamp(0.5rem, calc(3vw + 1rem), 7rem);
   font-weight: bold;
 }
-
 
 @media (width < 600px) {
   section {
     padding-inline: calc(2% + 60px);
   }
 }
-
-

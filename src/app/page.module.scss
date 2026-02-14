@@ -1,211 +1,199 @@
 @use "@/app/style/_variables" as *;
-
 @use "sass:color";
 $services-sticking-position: 30vh;
 
 .textWrap {
-  max-width: 1080px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
+    max-width: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .page {
-  position: relative;
-  z-index: 2;
-  > .hero {
-    overflow: hidden;
-    position: sticky;
-    top: 0;
-    padding: unset;
-  margin-inline:auto;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    > article {
-  display: flex;
-      height: 100dvh;
-  align-items: center;
-      justify-content: center;
-  flex-direction: column;
-  margin-inline: auto;
-      scale: 0.9;
-  width: 100%;
-  gap: 1.4rem;
-
-  p, h1 {
-    text-align: center;
     position: relative;
-    z-index: 2000;
+    z-index: 2;
+    > .hero {
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        padding: unset;
+        margin-inline: auto;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        > article {
+            display: flex;
+            height: 100dvh;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-inline: auto;
+            scale: 0.9;
+            width: 100%;
+            gap: 1.4rem;
 
-    text-shadow: 0px 0px 20px #000000;}
+            p,
+            h1 {
+                text-align: center;
+                position: relative;
+                z-index: 2000;
+
+                text-shadow: 0px 0px 20px #000000;
+            }
+        }
     }
-
-
-    }
-
 }
 
 .ansatz {
-     fieldset {
-       &:first-of-type {
-         margin-top: 3rem;
-       }
-      legend {
-        display: flex;
-        align-items: center;
-        padding-inline: 1rem;
-        padding-block: 0.25rem;
-        font-size: 0.85rem;
-        border-radius: 50px;
-
-        outline: hsl(0, 0%, 25%) solid 1px;
-        width: fit-content;
-        font-weight: 600;
-        background-color: #025949;
+    fieldset {
+        &:first-of-type {
+            margin-top: 3rem;
         }
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-       padding: 2rem;
-       margin-bottom: 3rem;
-       border: hsl(0, 0%, 25%) solid 1px;
-       border-radius: 4px;
-       background: linear-gradient(90deg,rgba(17, 17, 17, 1) 0%, rgba(34, 34, 34, 1) 100%);
-> p {
-  color:#B3B3B3;
+        legend {
+            display: flex;
+            align-items: center;
+            padding-inline: 1rem;
+            padding-block: 0.25rem;
+            font-size: 0.85rem;
+            border-radius: 50px;
 
+            outline: hsl(0, 0%, 25%) solid 1px;
+            width: fit-content;
+            font-weight: 600;
+            background-color: #025949;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 2rem;
+        margin-bottom: 3rem;
+        border: hsl(0, 0%, 25%) solid 1px;
+        border-radius: 4px;
+        background: linear-gradient(90deg, rgba(17, 17, 17, 1) 0%, rgba(34, 34, 34, 1) 100%);
+        > p {
+            color: #b3b3b3;
+        }
+    }
 }
-     }
-}
-
-
 
 .services {
-  position: relative;
-  margin-top: 200px;
+    position: relative;
+    margin-top: 200px;
 }
 
-
 .blockWrapper {
-  margin-top: 2rem;
- text-align: center;
+    margin-top: 2rem;
+    text-align: center;
 }
 /* Cards */
 .block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-   border-radius: 4px;
-  margin-bottom: 5rem;
-  padding: 1rem;
-  transition: transform 0.3s ease;
-  top: calc($services-sticking-position + 48px);
-  text-align: center;
- h2 {
-   text-align: center;
- }
-  ul {
-     display: flex;
-     gap: 1rem;
-      flex-wrap: wrap;
-     font-weight: 500;
-  font-size: 0.85rem;
-   }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 5rem;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    top: calc($services-sticking-position + 48px);
+    text-align: center;
+    h2 {
+        text-align: center;
+    }
+    ul {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        font-weight: 500;
+        font-size: 0.85rem;
+    }
 }
 
 .blockHeader {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
-  gap: 1rem;
-  > p {
-    color: #b3b3b3;
-  }
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    > p {
+        color: #b3b3b3;
+    }
 }
-
-
 
 .contact {
-  article {
-    form {
-      margin-block: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-      div {
-        display: flex;
-        gap: 1rem;
-        width: 100%;
-        input {
-          width: 100%;
+    article {
+        form {
+            margin-block: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            div {
+                display: flex;
+                gap: 1rem;
+                width: 100%;
+                input {
+                    width: 100%;
+                }
+            }
+
+            textarea {
+                resize: none;
+                height: 7.5rem;
+                width: 100%;
+            }
+
+            button {
+                width: fit-content;
+            }
         }
-      }
-
-      textarea{
-        resize: none;
-        height: 7.5rem;
-        width: 100%;
-      }
-
-      button {
-        width: fit-content;
-      }
     }
-  }
 }
 
-
-
 .projectCall {
-  position: sticky;
-  top: 80px;
-  height: 100dvh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+    position: sticky;
+    top: 80px;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .projectCallWrapper {
-  height: 300dvh;
-  position: relative;
-  padding-inline: calc(12.5% + 60px);
-
+    height: 300dvh;
+    position: relative;
+    padding-inline: calc(12.5% + 60px);
 }
 
 .blockChip {
-  display: flex;
-  outline: hsl(0, 0%, 50%) solid 1px;
-  border-radius: 50px;
+    display: flex;
+    outline: hsl(0, 0%, 50%) solid 1px;
+    border-radius: 50px;
 
-  width: fit-content;
-  padding-inline: 1rem;
-  padding-block: 0.25rem;
-  align-items: center;
-font-weight: 500;
-  list-style: none;
+    width: fit-content;
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    align-items: center;
+    font-weight: 500;
+    list-style: none;
     -webkit-box-shadow: 5px 5px 5px -6px #000000;
-  box-shadow: 5px 5px 5px -6px #000000;
-  > svg {
-    margin-right: 0.75rem;
-  }
-  &:first-of-type {
-    background-color: #025949;
-  }
+    box-shadow: 5px 5px 5px -6px #000000;
+    > svg {
+        margin-right: 0.75rem;
+    }
+    &:first-of-type {
+        background-color: #025949;
+    }
 }
 
 @media (width < 1200px) {
-  .contact {
-    article {
-      form {
-        div {
-          flex-direction: column;
+    .contact {
+        article {
+            form {
+                div {
+                    flex-direction: column;
+                }
+            }
         }
-      }
     }
-  }
 }
