@@ -1,14 +1,18 @@
-'use client';
+"use client";
 
-import gsap from 'gsap';
-import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { LucidePhone } from 'lucide-react';
-import ButtonIcon from '@/app/component/button/icon/button-icon';
-import styles from './header.module.scss';
+import gsap from "gsap";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { LucideChevronDown, LucideChevronsDown, LucidePhone } from "lucide-react";
+import ButtonIcon from "@/app/component/button/icon/button-icon";
+import styles from "./header.module.scss";
 
 gsap.registerPlugin(ScrambleTextPlugin);
 gsap.registerPlugin(ScrollTrigger);
+
+function LucideChevrosDown(props: { size: number }) {
+    return null;
+}
 
 const Header = () => {
     return (
@@ -23,6 +27,11 @@ const Header = () => {
                 <a href="https://www.google.de">Über D10</a>
                 <a href="https://www.google.de">Kontakt</a>
             </ul>
+
+            <button type="button" className={styles.linksMobile}>
+                <p>Start</p>
+                <LucideChevronDown size={16} />
+            </button>
 
             <div className={styles.menuWrap}>
                 <ButtonIcon icon={<LucidePhone size={20} />} callback={() => {}} />

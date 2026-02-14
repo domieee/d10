@@ -17,6 +17,10 @@
   outline: #333 solid 1px;
 }
 
+.linksMobile {
+  display: none;
+}
+
 .logoWrapper {
   padding: 0.75rem;
   border-radius: 50px;
@@ -81,9 +85,27 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (width < 992px) {
   .links {
     display: none;
+  }
+  .linksMobile {
+    display: flex;
+    border: 1px solid #333;
+    border-radius: 50px;
+    padding-inline: 1.5rem 1rem;
+    padding-block: 0.25rem;
+    background-color: transparent;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+  .linksMobile > p {
+    color: inherit;
+    font-weight: 600;
+  }
+  .linksMobile:hover {
+    background-color: hsl(0, 0%, 15%);
   }
   .header {
     width: 90vw;
